@@ -2,1225 +2,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Privacy Policy and Legal Notice for Signal by PureCore. Datenschutzerklärung und Impressum.">
-    <title>Signal – Privacy Policy | PureCore</title>
-
-    <style>
-        :root {
-            color-scheme: dark;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background: #080b10;
-            color: #e9edf3;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.65;
-        }
-
-        .container {
-            width: min(900px, calc(100% - 36px));
-            margin: 0 auto;
-            padding: 48px 0 80px;
-        }
-
-        header {
-            padding-bottom: 28px;
-            margin-bottom: 36px;
-            border-bottom: 1px solid #1a2029;
-        }
-
-        .brand {
-            color: #38d9ff;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            margin: 8px 0 4px;
-            font-size: clamp(32px, 6vw, 48px);
-            line-height: 1.15;
-            color: #ffffff;
-        }
-
-        h2 {
-            margin-top: 38px;
-            color: #ffffff;
-            font-size: 22px;
-        }
-
-        h3 {
-            margin-top: 24px;
-            color: #e9edf3;
-            font-size: 17px;
-        }
-
-        p, li {
-            color: #c7ced8;
-        }
-
-        ul {
-            padding-left: 22px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        .meta {
-            color: #77818f;
-            margin-top: 8px;
-        }
-
-        .language-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 24px;
-        }
-
-        .language-nav a {
-            text-decoration: none;
-            color: #38d9ff;
-            border: 1px solid #25303d;
-            border-radius: 10px;
-            padding: 8px 14px;
-        }
-
-        .language-nav a:hover,
-        .language-nav a:focus-visible {
-            background: #111720;
-        }
-
-        section.language {
-            margin-top: 28px;
-            scroll-margin-top: 24px;
-        }
-
-        .divider {
-            height: 1px;
-            background: #1a2029;
-            margin: 64px 0;
-        }
-
-        .notice {
-            background: #0e141c;
-            border: 1px solid #1d2834;
-            border-radius: 14px;
-            padding: 18px;
-            margin: 24px 0;
-            color: #c7ced8;
-        }
-
-        a {
-            color: #38d9ff;
-            overflow-wrap: anywhere;
-        }
-
-        footer {
-            border-top: 1px solid #1a2029;
-            margin-top: 64px;
-            padding-top: 24px;
-            color: #77818f;
-            font-size: 14px;
-        }
-
-        strong {
-            color: #e9edf3;
-        }
-
-        address {
-            font-style: normal;
-            color: #c7ced8;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding-top: 32px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Privacy Policy and Legal Notice for Signal by PureCore. Datenschutzerklärung und Impressum.">
+<title>Signal – Privacy Policy | PureCore</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background: #080b10;
+    color: #e9edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+}
+.container {
+    width: min(900px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 48px 0 80px;
+}
+header {
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid #1a2029;
+}
+.brand {
+    color: #38d9ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+h1 {
+    margin: 8px 0 4px;
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.15;
+    color: #ffffff;
+}
+h2 {
+    margin-top: 38px;
+    color: #ffffff;
+    font-size: 22px;
+}
+h3 {
+    margin-top: 24px;
+    color: #e9edf3;
+    font-size: 17px;
+}
+p, li { color: #c7ced8; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+.meta { color: #77818f; margin-top: 8px; }
+.language-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+.language-nav a {
+    text-decoration: none;
+    color: #38d9ff;
+    border: 1px solid #25303d;
+    border-radius: 10px;
+    padding: 8px 14px;
+}
+.language-nav a:hover,
+.language-nav a:focus-visible { background: #111720; }
+section.language {
+    margin-top: 28px;
+    scroll-margin-top: 24px;
+}
+.divider {
+    height: 1px;
+    background: #1a2029;
+    margin: 64px 0;
+}
+.notice {
+    background: #0e141c;
+    border: 1px solid #1d2834;
+    border-radius: 14px;
+    padding: 18px;
+    margin: 24px 0;
+    color: #c7ced8;
+}
+a {
+    color: #38d9ff;
+    overflow-wrap: anywhere;
+}
+footer {
+    border-top: 1px solid #1a2029;
+    margin-top: 64px;
+    padding-top: 24px;
+    color: #77818f;
+    font-size: 14px;
+}
+strong { color: #e9edf3; }
+address {
+    font-style: normal;
+    color: #c7ced8;
+}
+@media (max-width: 600px) {
+    .container { padding-top: 32px; }
+}
+</style>
 </head>
-
 <body>
-
 <div class="container">
 
 <header>
-    <div class="brand">PureCore</div>
-    <h1>Signal</h1>
-    <div class="meta">
-        Privacy Policy / Datenschutzerklärung
-    </div>
-
-    <nav class="language-nav" aria-label="Language and legal information">
-        <a href="#english">English</a>
-        <a href="#deutsch">Deutsch</a>
-        <a href="#legal-en">Legal Notice</a>
-        <a href="#impressum">Impressum</a>
-    </nav>
+<div class="brand">PureCore</div>
+<h1>Signal</h1>
+<div class="meta">Privacy Policy / Datenschutzerklärung</div>
+<nav class="language-nav" aria-label="Language and legal information">
+<a href="#english">English</a>
+<a href="#deutsch">Deutsch</a>
+<a href="#legal-en">Legal Notice</a>
+<a href="#impressum">Impressum</a>
+</nav>
 </header>
 
-
 <section id="english" class="language" lang="en">
-
 <h2>Privacy Policy</h2>
-
 <p><strong>Effective date:</strong> October 11, 2026</p>
 <p><strong>Application:</strong> Signal</p>
 <p><strong>Developer:</strong> PureCore</p>
-
 <div class="notice">
-Signal is a network diagnostics application for analyzing
-Wi-Fi, mobile network and internet connection quality,
-checking user-selected network destinations and examining
-devices on a local network.
-
-Signal does not require a user account and does not
-contain advertising or behavioral analytics.
+Signal is a network diagnostics application for analyzing Wi-Fi, mobile network and internet connection quality, checking user-selected network destinations and examining devices on a local network.
+Signal does not require a user account and does not contain advertising or behavioral analytics.
 </div>
 
-
 <h2>1. Data Controller</h2>
-
-<p>
-The person responsible for processing personal data
-in connection with Signal is:
-</p>
-
+<p>The person responsible for processing personal data in connection with Signal and this information website is:</p>
 <address>
 <strong>Harun Bozgül</strong><br>
 PureCore – Independent Developer<br>
 Tübinger Str. 56<br>
 72762 Reutlingen<br>
 Germany<br>
-Email:
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
+Email: <a href="mailto:purecore.support@proton.me">purecore.support@proton.me</a>
 </address>
-
 
 <h2>2. Information Processed on the Device</h2>
-
-<p>
-Signal processes technical network information made
-available by Android, depending on device capabilities,
-permissions and the selected diagnostic function.
-</p>
-
+<p>Signal processes technical network information made available by Android, depending on device capabilities, permissions and the selected diagnostic function.</p>
 <p>This information may include:</p>
-
 <ul>
-    <li>Wi-Fi signal strength and RSSI values.</li>
-    <li>SSID and BSSID of wireless networks.</li>
-    <li>Wi-Fi frequency, channel, channel width and standard.</li>
-    <li>Information about nearby Wi-Fi networks.</li>
-    <li>Mobile network type and connection status.</li>
-    <li>Mobile signal values such as RSRP, RSRQ, RSSI and SINR.</li>
-    <li>Technical SIM and subscription information required to identify active mobile connections.</li>
-    <li>Local IP addresses and network configuration.</li>
-    <li>Latency, jitter, packet loss and other diagnostic measurements.</li>
+<li>Wi-Fi signal strength and RSSI values.</li>
+<li>SSID and BSSID of wireless networks.</li>
+<li>Wi-Fi frequency, channel, channel width and standard.</li>
+<li>Information about nearby Wi-Fi networks.</li>
+<li>Mobile network type and connection status.</li>
+<li>Mobile signal values such as RSRP, RSRQ, RSSI and SINR.</li>
+<li>Technical SIM and subscription information required to identify active mobile connections.</li>
+<li>Local IP addresses and network configuration.</li>
+<li>Latency, jitter, packet loss and other diagnostic measurements.</li>
 </ul>
-
-<p>
-These values are used to display network conditions
-and perform the diagnostic functions requested by the user.
-</p>
-
-<p>
-Signal does not use this information to create
-advertising profiles or location histories.
-</p>
-
+<p>These values are used to display network conditions and perform the diagnostic functions requested by the user. Signal does not use this information to create advertising profiles or location histories.</p>
 
 <h2>3. Location Permission and Wi-Fi Scanning</h2>
-
-<p>
-Android may require location permission and enabled
-location services to provide information about the
-connected Wi-Fi network and nearby wireless networks.
-</p>
-
-<p>
-Signal uses the relevant permissions for Wi-Fi
-analysis, including channel analysis and
-signal monitoring.
-</p>
-
-<p>
-Signal does not request or record GPS coordinates
-for these functions and does not use Wi-Fi scanning
-to track the user's physical movements.
-</p>
-
-<p>
-Wi-Fi identifiers and information about nearby networks
-may nevertheless be location-related information
-because they can potentially reveal a device's location.
-</p>
-
+<p>Android may require location permission and enabled location services to provide information about the connected Wi-Fi network and nearby wireless networks.</p>
+<p>Signal uses the relevant permissions for Wi-Fi analysis, including channel analysis and signal monitoring.</p>
+<p>Signal does not request or record GPS coordinates for these functions and does not use Wi-Fi scanning to track the user's physical movements.</p>
+<p>Wi-Fi identifiers and information about nearby networks may nevertheless be location-related information because they can potentially reveal a device's location.</p>
 
 <h2>4. Phone and Mobile Network Information</h2>
-
-<p>
-Signal may request Android phone-state permission
-to obtain technical information about active mobile
-subscriptions, SIM slots and mobile network conditions.
-</p>
-
-<p>
-Signal does not use this permission to read phone calls,
-SMS messages or contacts.
-</p>
-
+<p>Signal may request Android phone-state permission to obtain technical information about active mobile subscriptions, SIM slots and mobile network conditions.</p>
+<p>Signal does not use this permission to read phone calls, SMS messages or contacts.</p>
 
 <h2>5. Network Check</h2>
-
-<p>
-Signal performs network connectivity diagnostics
-to measure latency, jitter, packet loss and
-connection availability.
-</p>
-
-<p>
-These tests may communicate with Cloudflare infrastructure,
-including:
-</p>
-
+<p>Signal performs network connectivity diagnostics to measure latency, jitter, packet loss and connection availability.</p>
+<p>These tests may communicate with Cloudflare infrastructure, including:</p>
 <ul>
-    <li>1.1.1.1</li>
-    <li>www.cloudflare.com/cdn-cgi/trace</li>
+<li>1.1.1.1</li>
+<li>www.cloudflare.com/cdn-cgi/trace</li>
 </ul>
-
-<p>
-When such connections are established, Cloudflare
-may receive the public IP address and other
-standard technical connection metadata.
-</p>
-
-<p>
-Signal uses these requests to perform network diagnostics,
-not for advertising or behavioral tracking.
-</p>
-
-<p>
-For information about Cloudflare's independent
-processing of personal data, see:
-<a href="https://www.cloudflare.com/privacypolicy/"
-target="_blank" rel="noopener noreferrer">
-Cloudflare Privacy Policy
-</a>.
-</p>
-
+<p>When such connections are established, Cloudflare may receive the public IP address and other standard technical connection metadata. These requests are made for diagnostics, not for advertising or behavioral tracking.</p>
+<p>Cloudflare's own data processing is described in its <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
 
 <h2>6. Target Check</h2>
-
-<p>
-Target Check allows users to enter a domain name,
-URL or IP address to test the availability and
-technical connection quality of that destination.
-</p>
-
-<p>
-Depending on the destination and supported protocols,
-Signal may perform:
-</p>
-
+<p>Target Check allows users to enter a domain name, URL or IP address to test its availability and technical connection quality.</p>
+<p>Depending on the destination and supported protocols, Signal may perform:</p>
 <ul>
-    <li>DNS resolution.</li>
-    <li>ICMP latency and packet-loss measurements.</li>
-    <li>TCP connection tests.</li>
-    <li>TLS connection tests.</li>
-    <li>HTTP or HTTPS requests and response-time measurements.</li>
+<li>DNS resolution.</li>
+<li>ICMP latency and packet-loss measurements.</li>
+<li>TCP connection tests.</li>
+<li>TLS connection tests.</li>
+<li>HTTP or HTTPS requests and response-time measurements.</li>
 </ul>
-
-<p>
-The selected destination, its network operator
-and any DNS resolver involved may receive
-technical connection information.
-</p>
-
-<p>
-This may include the public IP address,
-requested hostname, URL path or other
-standard protocol metadata, depending on
-the type of request.
-</p>
-
-<p>
-Signal performs these connections for the
-diagnostic function initiated by the user.
-</p>
-
-<p>
-PureCore does not operate a central server
-for collecting Target Check histories.
-</p>
-
+<p>The selected destination, its network operator and any DNS resolver involved may receive technical connection information. Depending on the request, this may include the public IP address, requested hostname, URL path and other standard protocol metadata.</p>
+<p>These connections are initiated for the diagnostic function selected by the user. PureCore does not operate a central server collecting Target Check histories.</p>
 
 <h2>7. Local Network Scanner</h2>
-
-<p>
-Signal can examine devices and services
-within the user's local network.
-</p>
-
-<p>
-The scanner may process:
-</p>
-
+<p>Signal can examine devices and services within the user's local network. The scanner may process:</p>
 <ul>
-    <li>Local IP addresses.</li>
-    <li>Hostnames and device information made available by network services.</li>
-    <li>Reachability and response information.</li>
-    <li>Information about accessible ports and services.</li>
+<li>Local IP addresses.</li>
+<li>Hostnames and device information made available by network services.</li>
+<li>Reachability and response information.</li>
+<li>Information about accessible ports and services.</li>
 </ul>
-
-<p>
-To perform these checks, Signal may send
-network requests directly to devices
-within the local network.
-</p>
-
-<p>
-The results are used for local network
-analysis and troubleshooting.
-</p>
-
-<p>
-Signal does not upload a collected
-local device inventory to a
-PureCore-operated server.
-</p>
-
+<p>Signal may send network requests directly to devices within the local network. The results are used for local network analysis and troubleshooting. Signal does not upload a collected local device inventory to a PureCore-operated server.</p>
 
 <h2>8. Wi-Fi Channel Analysis and Repeater Placement</h2>
-
-<p>
-Wi-Fi Channel Analysis examines nearby wireless
-networks, frequencies, channels and signal conditions
-using information provided by Android.
-</p>
-
-<p>
-Repeater Placement displays live Wi-Fi signal
-information and statistical measurements to help
-users evaluate potential repeater locations.
-</p>
-
-<p>
-These measurements and calculations
-are performed locally on the device.
-</p>
-
-<p>
-Signal does not create a physical movement
-or location history from these measurements.
-</p>
-
+<p>Wi-Fi Channel Analysis examines nearby wireless networks, frequencies, channels and signal conditions using information provided by Android.</p>
+<p>Repeater Placement displays live Wi-Fi signal information and statistical measurements to help users evaluate potential repeater locations.</p>
+<p>These measurements and calculations are performed locally on the device. Signal does not create a physical movement or location history from them.</p>
 
 <h2>9. Local Storage and Android Backup</h2>
-
-<p>
-Diagnostic measurements may be temporarily held
-in device memory while a measurement is running.
-</p>
-
-<p>
-Application preferences, such as language and
-display settings, may be stored locally using
-Android application storage.
-</p>
-
-<p>
-Signal does not maintain a PureCore-operated
-cloud database of users' network measurements.
-</p>
-
-<p>
-The application is configured to disable
-standard Android application backup.
-The behavior of device-to-device transfer
-may additionally depend on Android version,
-device manufacturer and system configuration.
-</p>
-
-<p>
-Locally stored application data is generally
-retained until it is cleared by the user,
-removed by the application or deleted
-when the application is uninstalled,
-subject to Android's data-management behavior.
-</p>
-
+<p>Diagnostic measurements may be temporarily held in device memory while a measurement is running.</p>
+<p>Application preferences, such as language and display settings, may be stored locally using Android application storage.</p>
+<p>Signal does not maintain a PureCore-operated cloud database of users' network measurements.</p>
+<p>The application is configured to disable standard Android application backup. Device-to-device transfer behavior may additionally depend on the Android version, device manufacturer and system configuration.</p>
+<p>Locally stored application data generally remains until changed, cleared or removed with the application, subject to Android's data-management behavior.</p>
 
 <h2>10. Purposes and Legal Bases</h2>
-
-<p>
-Personal data is processed where necessary
-to provide the application's requested
-network diagnostic functionality.
-</p>
-
-<p>
-Where applicable, processing necessary
-to provide the application and its
-requested functions is based on
-Article 6(1)(b) GDPR.
-</p>
-
-<p>
-Where processing is not necessary
-for contractual performance, technical
-operation, security and troubleshooting
-may be based on legitimate interests
-under Article 6(1)(f) GDPR,
-following the required balancing of interests.
-</p>
-
-<p>
-Android permissions control access to
-certain device functions. Granting an
-Android permission does not automatically
-constitute consent under the GDPR.
-</p>
-
+<p>Technical information is processed to provide the network diagnostics selected by the user, including Wi-Fi analysis, mobile network analysis, connectivity tests and local network checks.</p>
+<p>Where personal data processing is necessary to provide the purchased application's agreed functionality, Article 6(1)(b) GDPR may apply.</p>
+<p>Where processing is not necessary for contractual performance, the provision, security and troubleshooting of technical functions may rely on legitimate interests under Article 6(1)(f) GDPR, subject to the required balancing of interests.</p>
+<p>Connections to external diagnostic destinations occur as described in Sections 5 and 6. The recipients may process technical connection data under their own responsibilities and applicable legal bases.</p>
+<p>Android permissions control access to certain device functions. Granting an Android permission does not automatically constitute consent under the GDPR.</p>
 
 <h2>11. External Recipients and International Transfers</h2>
-
-<p>
-Network diagnostics may require communication
-with external services, including Cloudflare,
-DNS resolvers and destinations selected
-by the user.
-</p>
-
-<p>
-Such services may receive public IP addresses
-and technical connection metadata.
-</p>
-
-<p>
-Depending on the selected destination
-and network routing, data may be
-processed outside the European Economic Area.
-</p>
-
-<p>
-Independent providers are responsible
-for their own processing activities.
-Their privacy notices provide further
-information about applicable safeguards
-and international transfers.
-</p>
-
-<p>
-PureCore does not operate a developer-controlled
-analytics service that receives local
-Wi-Fi inventories or mobile signal histories.
-</p>
-
+<p>Network diagnostics may involve Cloudflare, DNS resolvers and destinations selected by the user. These recipients may receive public IP addresses and technical connection metadata.</p>
+<p>Cloudflare is an external provider for the diagnostic destinations described in Section 5. Its processing practices and information about international transfers are described in the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>.</p>
+<p>For user-selected destinations, the receiving operator and its location cannot be determined in advance. Depending on the destination and network routing, data may be processed outside the European Economic Area.</p>
+<p>PureCore does not operate a developer-controlled analytics service receiving local Wi-Fi inventories or mobile signal histories.</p>
 
 <h2>12. Data Retention</h2>
-
-<p>
-Live measurement samples are generally
-processed temporarily during the relevant
-diagnostic operation.
-</p>
-
-<p>
-Locally stored application preferences
-remain available until they are changed,
-cleared or removed with the application's data.
-</p>
-
-<p>
-PureCore does not maintain a server-side
-retention period for diagnostic histories,
-because no such central history
-is operated by PureCore.
-</p>
-
-<p>
-External destinations may independently
-retain connection information according
-to their own policies and legal obligations.
-</p>
-
+<p>Live measurement samples are generally processed temporarily during the relevant diagnostic operation.</p>
+<p>Locally stored application preferences remain available until changed, cleared or removed with the application's data.</p>
+<p>PureCore does not maintain a server-side retention period for diagnostic histories because no such central history is operated by PureCore.</p>
+<p>External destinations may independently retain connection information according to their own policies and legal obligations.</p>
 
 <h2>13. Advertising, Analytics and Data Sales</h2>
+<p>Signal does not require registration or a user account. It does not contain advertising or use third-party behavioral analytics to create user profiles.</p>
+<p>PureCore does not sell personal data obtained through Signal.</p>
 
-<p>
-Signal does not require registration
-or a user account.
-</p>
+<h2>14. This Website (GitHub Pages)</h2>
+<p>This information page is hosted through GitHub Pages, a service provided by GitHub. When the page is accessed, the hosting infrastructure may process technical request data, such as the visitor's IP address, request time, requested page, browser information and security-related metadata, to deliver and protect the website.</p>
+<p>Providing a functioning and secure information page serves the legitimate interest under Article 6(1)(f) GDPR, insofar as processing is attributable to the website operator. GitHub's own processing, retention and any international transfers are described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>. PureCore does not embed advertising trackers or a separate analytics service in this page.</p>
 
-<p>
-Signal does not contain advertising
-or use third-party behavioral analytics
-to create user profiles.
-</p>
-
-<p>
-PureCore does not sell personal data
-obtained through Signal.
-</p>
-
-
-<h2>14. Your Data Protection Rights</h2>
-
-<p>
-Subject to the applicable legal requirements,
-you may have the right to:
-</p>
-
+<h2>15. Your Data Protection Rights</h2>
+<p>Subject to applicable legal requirements, you may have the right to:</p>
 <ul>
-    <li>Access your personal data.</li>
-    <li>Request correction of inaccurate data.</li>
-    <li>Request deletion of personal data.</li>
-    <li>Request restriction of processing.</li>
-    <li>Receive data in a portable format where applicable.</li>
-    <li>Object to processing based on legitimate interests.</li>
-    <li>Withdraw consent where processing is based on consent.</li>
+<li>Access your personal data.</li>
+<li>Request correction of inaccurate data.</li>
+<li>Request deletion of personal data.</li>
+<li>Request restriction of processing.</li>
+<li>Receive data in a portable format where applicable.</li>
+<li>Object to processing based on legitimate interests.</li>
+<li>Withdraw consent where processing is based on consent.</li>
 </ul>
+<p>You also have the right to lodge a complaint with a competent data protection supervisory authority.</p>
+<p>For the developer's location in Baden-Württemberg, Germany, the relevant supervisory authority is the State Commissioner for Data Protection and Freedom of Information Baden-Württemberg.</p>
+<p>Website: <a href="https://www.baden-wuerttemberg.datenschutz.de/" target="_blank" rel="noopener noreferrer">www.baden-wuerttemberg.datenschutz.de</a></p>
+<p>Requests can be sent to <a href="mailto:purecore.support@proton.me">purecore.support@proton.me</a>.</p>
 
-<p>
-You also have the right to lodge a complaint
-with a competent data protection supervisory authority.
-</p>
-
-<p>
-For the developer's location in Baden-Württemberg,
-Germany, the relevant supervisory authority is
-the State Commissioner for Data Protection
-and Freedom of Information Baden-Württemberg.
-</p>
-
-<p>
-Website:
-<a href="https://www.baden-wuerttemberg.datenschutz.de/"
-target="_blank" rel="noopener noreferrer">
-www.baden-wuerttemberg.datenschutz.de
-</a>
-</p>
-
-<p>
-Requests can be sent to
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>.
-</p>
-
-
-<h2>15. Changes to This Privacy Policy</h2>
-
-<p>
-This Privacy Policy may be updated
-when Signal's functionality, permissions
-or data-processing practices change.
-</p>
-
-<p>
-The current version will be published
-on this page and linked from the application
-and its Google Play listing.
-</p>
-
-
-<h2>16. Contact</h2>
-
-<address>
-<strong>Harun Bozgül</strong><br>
-PureCore<br>
-Tübinger Str. 56<br>
-72762 Reutlingen<br>
-Germany<br>
-Email:
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
-</address>
-
+<h2>16. Changes to This Privacy Policy</h2>
+<p>This Privacy Policy may be updated when Signal's functionality, permissions or data-processing practices change. The current version will be published on this page and linked from the application and its Google Play listing.</p>
 </section>
-
 
 <div class="divider"></div>
 
-
 <section id="deutsch" class="language" lang="de">
-
 <h2>Datenschutzerklärung</h2>
-
 <p><strong>Stand:</strong> 11. Oktober 2026</p>
 <p><strong>Anwendung:</strong> Signal</p>
 <p><strong>Entwickler:</strong> PureCore</p>
-
 <div class="notice">
-Signal ist eine Anwendung zur technischen Analyse
-von WLAN-, Mobilfunk- und Internetverbindungen,
-zur Prüfung selbst gewählter Netzwerkziele
-und zur Untersuchung von Geräten im lokalen Netzwerk.
-
-Signal benötigt kein Benutzerkonto und enthält
-keine Werbung oder verhaltensbasierten Analysefunktionen.
+Signal ist eine Anwendung zur technischen Analyse von WLAN-, Mobilfunk- und Internetverbindungen, zur Prüfung selbst gewählter Netzwerkziele und zur Untersuchung von Geräten im lokalen Netzwerk.
+Signal benötigt kein Benutzerkonto und enthält keine Werbung oder verhaltensbasierten Analysefunktionen.
 </div>
 
-
 <h2>1. Verantwortlicher</h2>
-
-<p>
-Verantwortlich für die Verarbeitung personenbezogener
-Daten im Zusammenhang mit Signal ist:
-</p>
-
+<p>Verantwortlich für die Verarbeitung personenbezogener Daten im Zusammenhang mit Signal und dieser Informationswebsite ist:</p>
 <address>
 <strong>Harun Bozgül</strong><br>
 PureCore – Einzelentwickler<br>
 Tübinger Str. 56<br>
 72762 Reutlingen<br>
 Deutschland<br>
-E-Mail:
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
+E-Mail: <a href="mailto:purecore.support@proton.me">purecore.support@proton.me</a>
 </address>
-
 
 <h2>2. Auf dem Gerät verarbeitete Informationen</h2>
-
-<p>
-Signal verarbeitet technische Netzwerkdaten,
-die Android abhängig von den Gerätefunktionen,
-Berechtigungen und ausgewählten Diagnosefunktionen
-bereitstellt.
-</p>
-
+<p>Signal verarbeitet technische Netzwerkdaten, die Android abhängig von den Gerätefunktionen, Berechtigungen und ausgewählten Diagnosefunktionen bereitstellt.</p>
 <p>Dazu können gehören:</p>
-
 <ul>
-    <li>WLAN-Signalstärke und RSSI-Werte.</li>
-    <li>SSID und BSSID von WLAN-Netzwerken.</li>
-    <li>WLAN-Frequenz, Kanal, Kanalbreite und WLAN-Standard.</li>
-    <li>Informationen über benachbarte WLAN-Netzwerke.</li>
-    <li>Mobilfunkstandard und Verbindungsstatus.</li>
-    <li>Mobilfunksignalwerte wie RSRP, RSRQ, RSSI und SINR.</li>
-    <li>Technische SIM- und Abonnementinformationen zur Ermittlung aktiver Mobilfunkverbindungen.</li>
-    <li>Lokale IP-Adressen und Netzwerkkonfiguration.</li>
-    <li>Latenz, Jitter, Paketverlust und weitere Diagnosemesswerte.</li>
+<li>WLAN-Signalstärke und RSSI-Werte.</li>
+<li>SSID und BSSID von WLAN-Netzwerken.</li>
+<li>WLAN-Frequenz, Kanal, Kanalbreite und WLAN-Standard.</li>
+<li>Informationen über benachbarte WLAN-Netzwerke.</li>
+<li>Mobilfunkstandard und Verbindungsstatus.</li>
+<li>Mobilfunksignalwerte wie RSRP, RSRQ, RSSI und SINR.</li>
+<li>Technische SIM- und Abonnementinformationen zur Ermittlung aktiver Mobilfunkverbindungen.</li>
+<li>Lokale IP-Adressen und Netzwerkkonfiguration.</li>
+<li>Latenz, Jitter, Paketverlust und weitere Diagnosemesswerte.</li>
 </ul>
-
-<p>
-Diese Daten werden zur Darstellung
-des Netzwerkzustands und zur Durchführung
-der vom Nutzer angeforderten Diagnosefunktionen verwendet.
-</p>
-
-<p>
-Signal erstellt daraus keine Werbeprofile
-oder Standortverläufe.
-</p>
-
+<p>Diese Daten werden zur Darstellung des Netzwerkzustands und zur Durchführung der vom Nutzer angeforderten Diagnosefunktionen verwendet. Signal erstellt daraus keine Werbeprofile oder Standortverläufe.</p>
 
 <h2>3. Standortberechtigung und WLAN-Scans</h2>
-
-<p>
-Android kann für den Zugriff auf bestimmte
-WLAN-Informationen eine Standortberechtigung
-und aktivierte Standortdienste voraussetzen.
-</p>
-
-<p>
-Dies betrifft insbesondere Informationen
-über das verbundene WLAN und benachbarte Netzwerke.
-</p>
-
-<p>
-Signal verwendet diese Berechtigungen
-für die WLAN-Analyse, beispielsweise
-zur Kanalanalyse und Signalüberwachung.
-</p>
-
-<p>
-Signal fragt für diese Funktionen keine
-GPS-Koordinaten ab, zeichnet keine
-GPS-Koordinaten auf und verwendet
-WLAN-Scans nicht zur Verfolgung
-physischer Bewegungen.
-</p>
-
-<p>
-WLAN-Kennungen und Informationen über
-benachbarte Netzwerke können dennoch
-standortbezogene Informationen darstellen,
-weil sie Rückschlüsse auf einen Standort
-ermöglichen können.
-</p>
-
+<p>Android kann für den Zugriff auf bestimmte WLAN-Informationen eine Standortberechtigung und aktivierte Standortdienste voraussetzen.</p>
+<p>Dies betrifft insbesondere Informationen über das verbundene WLAN und benachbarte Netzwerke.</p>
+<p>Signal verwendet diese Berechtigungen für die WLAN-Analyse, beispielsweise zur Kanalanalyse und Signalüberwachung.</p>
+<p>Signal fragt für diese Funktionen keine GPS-Koordinaten ab, zeichnet keine GPS-Koordinaten auf und verwendet WLAN-Scans nicht zur Verfolgung physischer Bewegungen.</p>
+<p>WLAN-Kennungen und Informationen über benachbarte Netzwerke können dennoch standortbezogene Informationen darstellen, weil sie Rückschlüsse auf einen Standort ermöglichen können.</p>
 
 <h2>4. Telefon- und Mobilfunkinformationen</h2>
-
-<p>
-Signal kann die Android-Telefonstatusberechtigung
-benötigen, um technische Informationen
-über aktive Mobilfunkabonnements,
-SIM-Steckplätze und Mobilfunkverbindungen
-auszulesen.
-</p>
-
-<p>
-Signal verwendet diese Berechtigung
-nicht zum Lesen von Telefonaten,
-SMS-Nachrichten oder Kontakten.
-</p>
-
+<p>Signal kann die Android-Telefonstatusberechtigung benötigen, um technische Informationen über aktive Mobilfunkabonnements, SIM-Steckplätze und Mobilfunkverbindungen auszulesen.</p>
+<p>Signal verwendet diese Berechtigung nicht zum Lesen von Telefonaten, SMS-Nachrichten oder Kontakten.</p>
 
 <h2>5. Network Check</h2>
-
-<p>
-Signal führt Netzwerkdiagnosen durch,
-um Latenz, Jitter, Paketverlust
-und Erreichbarkeit zu messen.
-</p>
-
-<p>
-Hierfür können Verbindungen zur
-Cloudflare-Infrastruktur hergestellt werden,
-insbesondere zu:
-</p>
-
+<p>Signal führt Netzwerkdiagnosen durch, um Latenz, Jitter, Paketverlust und Erreichbarkeit zu messen.</p>
+<p>Hierfür können Verbindungen zur Cloudflare-Infrastruktur hergestellt werden, insbesondere zu:</p>
 <ul>
-    <li>1.1.1.1</li>
-    <li>www.cloudflare.com/cdn-cgi/trace</li>
+<li>1.1.1.1</li>
+<li>www.cloudflare.com/cdn-cgi/trace</li>
 </ul>
-
-<p>
-Bei solchen Verbindungen kann Cloudflare
-die öffentliche IP-Adresse sowie
-übliche technische Verbindungsinformationen erhalten.
-</p>
-
-<p>
-Signal verwendet diese Anfragen
-zur Netzwerkdiagnose und nicht
-für Werbung oder verhaltensbasierte Nachverfolgung.
-</p>
-
-<p>
-Informationen zur eigenständigen Datenverarbeitung
-durch Cloudflare:
-<a href="https://www.cloudflare.com/privacypolicy/"
-target="_blank" rel="noopener noreferrer">
-Cloudflare-Datenschutzerklärung
-</a>.
-</p>
-
+<p>Bei solchen Verbindungen kann Cloudflare die öffentliche IP-Adresse sowie übliche technische Verbindungsinformationen erhalten. Diese Anfragen dienen der Netzwerkdiagnose und nicht der Werbung oder verhaltensbasierten Nachverfolgung.</p>
+<p>Informationen zur eigenständigen Datenverarbeitung durch Cloudflare enthält die <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare-Datenschutzerklärung</a>.</p>
 
 <h2>6. Target Check</h2>
-
-<p>
-Mit Target Check können Nutzer
-eine Domain, URL oder IP-Adresse
-eingeben, um deren Erreichbarkeit
-und technische Verbindungsqualität
-zu überprüfen.
-</p>
-
-<p>
-Abhängig vom Ziel und den unterstützten
-Protokollen kann Signal folgende Prüfungen durchführen:
-</p>
-
+<p>Mit Target Check können Nutzer eine Domain, URL oder IP-Adresse eingeben, um deren Erreichbarkeit und technische Verbindungsqualität zu überprüfen.</p>
+<p>Abhängig vom Ziel und den unterstützten Protokollen kann Signal folgende Prüfungen durchführen:</p>
 <ul>
-    <li>DNS-Auflösung.</li>
-    <li>ICMP-Latenz- und Paketverlustmessungen.</li>
-    <li>TCP-Verbindungsprüfungen.</li>
-    <li>TLS-Verbindungsprüfungen.</li>
-    <li>HTTP- oder HTTPS-Anfragen und Antwortzeitmessungen.</li>
+<li>DNS-Auflösung.</li>
+<li>ICMP-Latenz- und Paketverlustmessungen.</li>
+<li>TCP-Verbindungsprüfungen.</li>
+<li>TLS-Verbindungsprüfungen.</li>
+<li>HTTP- oder HTTPS-Anfragen und Antwortzeitmessungen.</li>
 </ul>
-
-<p>
-Der ausgewählte Zielserver, dessen
-Netzbetreiber und gegebenenfalls beteiligte
-DNS-Resolver können technische
-Verbindungsinformationen erhalten.
-</p>
-
-<p>
-Dazu können abhängig von der Anfrage
-die öffentliche IP-Adresse, der angefragte
-Hostname, URL-Pfade und weitere
-übliche Protokollinformationen gehören.
-</p>
-
-<p>
-Diese Verbindungen dienen der
-vom Nutzer gestarteten Diagnose.
-</p>
-
-<p>
-PureCore betreibt keinen zentralen
-Server zur Sammlung von
-Target-Check-Messhistorien.
-</p>
-
+<p>Der ausgewählte Zielserver, dessen Netzbetreiber und gegebenenfalls beteiligte DNS-Resolver können technische Verbindungsinformationen erhalten. Dazu können abhängig von der Anfrage die öffentliche IP-Adresse, der angefragte Hostname, URL-Pfade und weitere übliche Protokollinformationen gehören.</p>
+<p>Diese Verbindungen dienen der vom Nutzer gestarteten Diagnose. PureCore betreibt keinen zentralen Server zur Sammlung von Target-Check-Messhistorien.</p>
 
 <h2>7. Local Network Scanner</h2>
-
-<p>
-Signal kann Geräte und Dienste
-innerhalb des lokalen Netzwerks untersuchen.
-</p>
-
-<p>
-Dabei können folgende Informationen
-verarbeitet werden:
-</p>
-
+<p>Signal kann Geräte und Dienste innerhalb des lokalen Netzwerks untersuchen. Dabei können folgende Informationen verarbeitet werden:</p>
 <ul>
-    <li>Lokale IP-Adressen.</li>
-    <li>Hostnamen und von Netzwerkdiensten bereitgestellte Geräteinformationen.</li>
-    <li>Erreichbarkeit und technische Antwortinformationen.</li>
-    <li>Informationen über erreichbare Ports und Dienste.</li>
+<li>Lokale IP-Adressen.</li>
+<li>Hostnamen und von Netzwerkdiensten bereitgestellte Geräteinformationen.</li>
+<li>Erreichbarkeit und technische Antwortinformationen.</li>
+<li>Informationen über erreichbare Ports und Dienste.</li>
 </ul>
-
-<p>
-Zur Durchführung dieser Prüfungen
-kann Signal Netzwerkanfragen direkt
-an Geräte innerhalb des lokalen
-Netzwerks senden.
-</p>
-
-<p>
-Die Ergebnisse werden zur lokalen
-Netzwerkanalyse und Fehlersuche verwendet.
-</p>
-
-<p>
-Signal überträgt keine erfasste
-lokale Geräteliste an einen
-von PureCore betriebenen Server.
-</p>
-
+<p>Zur Durchführung dieser Prüfungen kann Signal Netzwerkanfragen direkt an Geräte innerhalb des lokalen Netzwerks senden.</p>
+<p>Die Ergebnisse werden zur lokalen Netzwerkanalyse und Fehlersuche verwendet. Signal überträgt keine erfasste lokale Geräteliste an einen von PureCore betriebenen Server.</p>
 
 <h2>8. WLAN-Kanalanalyse und Repeater Placement</h2>
-
-<p>
-Die WLAN-Kanalanalyse untersucht
-benachbarte Funknetzwerke,
-Frequenzen, Kanäle und Signalbedingungen
-anhand der von Android bereitgestellten Daten.
-</p>
-
-<p>
-Repeater Placement zeigt aktuelle
-WLAN-Signalwerte und statistische
-Messungen an, um Nutzer bei der
-Bewertung möglicher Repeater-Positionen
-zu unterstützen.
-</p>
-
-<p>
-Diese Messungen und Berechnungen
-erfolgen lokal auf dem Gerät.
-</p>
-
-<p>
-Signal erstellt daraus keinen
-Bewegungs- oder Standortverlauf.
-</p>
-
+<p>Die WLAN-Kanalanalyse untersucht benachbarte Funknetzwerke, Frequenzen, Kanäle und Signalbedingungen anhand der von Android bereitgestellten Daten.</p>
+<p>Repeater Placement zeigt aktuelle WLAN-Signalwerte und statistische Messungen an, um Nutzer bei der Bewertung möglicher Repeater-Positionen zu unterstützen.</p>
+<p>Diese Messungen und Berechnungen erfolgen lokal auf dem Gerät. Signal erstellt daraus keinen Bewegungs- oder Standortverlauf.</p>
 
 <h2>9. Lokale Speicherung und Android-Backup</h2>
-
-<p>
-Während einer laufenden Diagnose
-können Messwerte vorübergehend
-im Arbeitsspeicher des Geräts
-gehalten werden.
-</p>
-
-<p>
-App-Einstellungen wie Sprache
-und Anzeigeoptionen können
-über die lokalen Speichermechanismen
-von Android gespeichert werden.
-</p>
-
-<p>
-Signal betreibt keine eigene
-PureCore-Cloud-Datenbank
-für Netzwerkmesswerte der Nutzer.
-</p>
-
-<p>
-Die Anwendung ist so konfiguriert,
-dass die reguläre Android-App-Datensicherung
-deaktiviert ist.
-</p>
-
-<p>
-Das Verhalten bei einer Übertragung
-von Gerät zu Gerät kann zusätzlich
-von der Android-Version, dem
-Gerätehersteller und den
-Systemeinstellungen abhängen.
-</p>
-
-<p>
-Lokal gespeicherte App-Daten
-bleiben grundsätzlich erhalten,
-bis sie geändert, vom Nutzer
-gelöscht oder bei der Deinstallation
-entfernt werden, vorbehaltlich
-der Datenverwaltung durch Android.
-</p>
-
+<p>Während einer laufenden Diagnose können Messwerte vorübergehend im Arbeitsspeicher des Geräts gehalten werden.</p>
+<p>App-Einstellungen wie Sprache und Anzeigeoptionen können über die lokalen Speichermechanismen von Android gespeichert werden.</p>
+<p>Signal betreibt keine eigene PureCore-Cloud-Datenbank für Netzwerkmesswerte der Nutzer.</p>
+<p>Die Anwendung ist so konfiguriert, dass die reguläre Android-App-Datensicherung deaktiviert ist. Das Verhalten bei einer Übertragung von Gerät zu Gerät kann zusätzlich von der Android-Version, dem Gerätehersteller und den Systemeinstellungen abhängen.</p>
+<p>Lokal gespeicherte App-Daten bleiben grundsätzlich erhalten, bis sie geändert, gelöscht oder bei der Deinstallation entfernt werden, vorbehaltlich der Datenverwaltung durch Android.</p>
 
 <h2>10. Zwecke und Rechtsgrundlagen</h2>
-
-<p>
-Personenbezogene Daten werden verarbeitet,
-soweit dies zur Bereitstellung
-der angeforderten Netzwerkdiagnosefunktionen
-erforderlich ist.
-</p>
-
-<p>
-Soweit anwendbar, erfolgt die
-zur Bereitstellung der Anwendung
-und ihrer angeforderten Funktionen
-erforderliche Verarbeitung auf Grundlage
-von Art. 6 Abs. 1 lit. b DSGVO.
-</p>
-
-<p>
-Soweit eine Verarbeitung nicht
-zur Vertragserfüllung erforderlich ist,
-können technische Betriebszwecke,
-Sicherheit und Fehlerbehebung
-auf berechtigte Interessen nach
-Art. 6 Abs. 1 lit. f DSGVO
-gestützt werden, sofern die
-erforderliche Interessenabwägung
-dies rechtfertigt.
-</p>
-
-<p>
-Android-Berechtigungen regeln
-den Zugriff auf bestimmte Gerätefunktionen.
-Die Erteilung einer Android-Berechtigung
-stellt nicht automatisch eine
-datenschutzrechtliche Einwilligung dar.
-</p>
-
+<p>Technische Informationen werden verarbeitet, um die vom Nutzer ausgewählten Netzwerkdiagnosen bereitzustellen. Dazu gehören WLAN-Analyse, Mobilfunkanalyse, Verbindungstests und lokale Netzwerkprüfungen.</p>
+<p>Soweit die Verarbeitung personenbezogener Daten für die Bereitstellung der vertraglich vereinbarten Funktionen der erworbenen Anwendung erforderlich ist, kann Art. 6 Abs. 1 lit. b DSGVO einschlägig sein.</p>
+<p>Soweit eine Verarbeitung nicht zur Vertragserfüllung erforderlich ist, können Bereitstellung, Sicherheit und Fehlerbehebung technischer Funktionen auf berechtigte Interessen nach Art. 6 Abs. 1 lit. f DSGVO gestützt werden, sofern die erforderliche Interessenabwägung dies rechtfertigt.</p>
+<p>Verbindungen zu externen Diagnosezielen erfolgen wie in den Abschnitten 5 und 6 beschrieben. Die Empfänger können technische Verbindungsdaten in eigener Verantwortung und auf Grundlage der für sie geltenden Rechtsgrundlagen verarbeiten.</p>
+<p>Android-Berechtigungen regeln den Zugriff auf bestimmte Gerätefunktionen. Die Erteilung einer Android-Berechtigung stellt nicht automatisch eine datenschutzrechtliche Einwilligung dar.</p>
 
 <h2>11. Externe Empfänger und Drittlandübermittlungen</h2>
-
-<p>
-Netzwerkdiagnosen können Verbindungen
-zu externen Diensten erfordern,
-darunter Cloudflare, DNS-Resolver
-und vom Nutzer ausgewählte Netzwerkziele.
-</p>
-
-<p>
-Diese Dienste können öffentliche
-IP-Adressen und technische
-Verbindungsinformationen erhalten.
-</p>
-
-<p>
-Abhängig vom ausgewählten Ziel
-und der Netzwerkroute können
-Daten auch außerhalb des
-Europäischen Wirtschaftsraums
-verarbeitet werden.
-</p>
-
-<p>
-Eigenständig handelnde Anbieter
-sind für ihre jeweilige
-Datenverarbeitung verantwortlich.
-</p>
-
-<p>
-Weitere Informationen zu Schutzmaßnahmen
-und internationalen Datenübermittlungen
-enthalten deren Datenschutzbestimmungen.
-</p>
-
-<p>
-PureCore betreibt keinen eigenen
-Analysedienst, an den lokale
-WLAN-Netzwerklisten oder
-Mobilfunksignalhistorien
-übertragen werden.
-</p>
-
+<p>Netzwerkdiagnosen können Cloudflare, DNS-Resolver und vom Nutzer ausgewählte Netzwerkziele einbeziehen. Diese Empfänger können öffentliche IP-Adressen und technische Verbindungsinformationen erhalten.</p>
+<p>Cloudflare ist ein externer Anbieter für die in Abschnitt 5 beschriebenen Diagnoseziele. Informationen zu dessen Datenverarbeitung und internationalen Übermittlungen enthält die <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare-Datenschutzerklärung</a>.</p>
+<p>Bei vom Nutzer ausgewählten Zielen lassen sich der empfangende Betreiber und dessen Standort nicht im Voraus bestimmen. Abhängig vom Ziel und der Netzwerkroute können Daten auch außerhalb des Europäischen Wirtschaftsraums verarbeitet werden.</p>
+<p>PureCore betreibt keinen eigenen Analysedienst, an den lokale WLAN-Netzwerklisten oder Mobilfunksignalhistorien übertragen werden.</p>
 
 <h2>12. Speicherdauer</h2>
-
-<p>
-Aktuelle Diagnosemesswerte werden
-grundsätzlich vorübergehend während
-der jeweiligen Messung verarbeitet.
-</p>
-
-<p>
-Lokal gespeicherte App-Einstellungen
-bleiben erhalten, bis sie geändert,
-gelöscht oder zusammen mit den
-App-Daten entfernt werden.
-</p>
-
-<p>
-PureCore betreibt keine zentrale
-Messhistorie und hat daher keine
-serverseitige Speicherdauer
-für solche Diagnosehistorien.
-</p>
-
-<p>
-Externe Zielserver können
-Verbindungsinformationen nach
-ihren eigenen Bestimmungen
-und gesetzlichen Verpflichtungen speichern.
-</p>
-
+<p>Aktuelle Diagnosemesswerte werden grundsätzlich vorübergehend während der jeweiligen Messung verarbeitet.</p>
+<p>Lokal gespeicherte App-Einstellungen bleiben erhalten, bis sie geändert, gelöscht oder zusammen mit den App-Daten entfernt werden.</p>
+<p>PureCore betreibt keine zentrale Messhistorie und hat daher keine serverseitige Speicherdauer für solche Diagnosehistorien.</p>
+<p>Externe Zielserver können Verbindungsinformationen nach ihren eigenen Bestimmungen und gesetzlichen Verpflichtungen speichern.</p>
 
 <h2>13. Werbung, Analyse und Datenverkauf</h2>
+<p>Signal benötigt keine Registrierung und kein Benutzerkonto. Signal enthält keine Werbung und verwendet keine verhaltensbasierten Analysedienste von Drittanbietern zur Erstellung von Nutzerprofilen.</p>
+<p>PureCore verkauft keine über Signal erhaltenen personenbezogenen Daten.</p>
 
-<p>
-Signal benötigt keine Registrierung
-und kein Benutzerkonto.
-</p>
+<h2>14. Diese Website (GitHub Pages)</h2>
+<p>Diese Informationsseite wird über GitHub Pages bereitgestellt, einen Dienst von GitHub. Beim Aufruf können durch die Hosting-Infrastruktur technische Zugriffsdaten verarbeitet werden, etwa IP-Adresse, Zeitpunkt des Abrufs, angeforderte Seite, Browserinformationen und sicherheitsrelevante Metadaten, um die Website auszuliefern und zu schützen.</p>
+<p>Die Bereitstellung einer funktionsfähigen und sicheren Informationsseite dient dem berechtigten Interesse nach Art. 6 Abs. 1 lit. f DSGVO, soweit die Verarbeitung dem Websitebetreiber zuzurechnen ist. Informationen über die eigene Verarbeitung, Speicherdauer und etwaige Drittlandübermittlungen durch GitHub enthält die <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub-Datenschutzerklärung</a>. PureCore bindet auf dieser Seite keine Werbetracker oder eigenen Analysedienste ein.</p>
 
-<p>
-Signal enthält keine Werbung
-und verwendet keine verhaltensbasierten
-Analysedienste von Drittanbietern
-zur Erstellung von Nutzerprofilen.
-</p>
-
-<p>
-PureCore verkauft keine über
-Signal erhaltenen personenbezogenen Daten.
-</p>
-
-
-<h2>14. Rechte betroffener Personen</h2>
-
-<p>
-Nach Maßgabe der gesetzlichen
-Voraussetzungen bestehen insbesondere
-folgende Datenschutzrechte:
-</p>
-
+<h2>15. Rechte betroffener Personen</h2>
+<p>Nach Maßgabe der gesetzlichen Voraussetzungen bestehen insbesondere folgende Datenschutzrechte:</p>
 <ul>
-    <li>Auskunft über personenbezogene Daten.</li>
-    <li>Berichtigung unrichtiger Daten.</li>
-    <li>Löschung personenbezogener Daten.</li>
-    <li>Einschränkung der Verarbeitung.</li>
-    <li>Datenübertragbarkeit, soweit anwendbar.</li>
-    <li>Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen.</li>
-    <li>Widerruf einer Einwilligung, sofern eine Verarbeitung auf Einwilligung beruht.</li>
+<li>Auskunft über personenbezogene Daten.</li>
+<li>Berichtigung unrichtiger Daten.</li>
+<li>Löschung personenbezogener Daten.</li>
+<li>Einschränkung der Verarbeitung.</li>
+<li>Datenübertragbarkeit, soweit anwendbar.</li>
+<li>Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen.</li>
+<li>Widerruf einer Einwilligung, sofern eine Verarbeitung auf Einwilligung beruht.</li>
 </ul>
+<p>Darüber hinaus besteht das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren.</p>
+<p>Für den Standort des Entwicklers ist insbesondere der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg zuständig.</p>
+<p>Website: <a href="https://www.baden-wuerttemberg.datenschutz.de/" target="_blank" rel="noopener noreferrer">www.baden-wuerttemberg.datenschutz.de</a></p>
+<p>Anfragen können an <a href="mailto:purecore.support@proton.me">purecore.support@proton.me</a> gerichtet werden.</p>
 
-<p>
-Darüber hinaus besteht das Recht,
-sich bei einer zuständigen
-Datenschutzaufsichtsbehörde
-zu beschweren.
-</p>
-
-<p>
-Für den Standort des Entwicklers
-ist insbesondere der Landesbeauftragte
-für den Datenschutz und die
-Informationsfreiheit Baden-Württemberg
-zuständig.
-</p>
-
-<p>
-Website:
-<a href="https://www.baden-wuerttemberg.datenschutz.de/"
-target="_blank" rel="noopener noreferrer">
-www.baden-wuerttemberg.datenschutz.de
-</a>
-</p>
-
-<p>
-Anfragen können an
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
-gerichtet werden.
-</p>
-
-
-<h2>15. Änderungen dieser Datenschutzerklärung</h2>
-
-<p>
-Diese Datenschutzerklärung kann
-aktualisiert werden, wenn sich
-Funktionen, Berechtigungen
-oder die Datenverarbeitung
-von Signal ändern.
-</p>
-
-<p>
-Die aktuelle Version wird
-auf dieser Seite veröffentlicht
-und innerhalb der Anwendung
-sowie im Google-Play-Eintrag verlinkt.
-</p>
-
-
-<h2>16. Kontakt</h2>
-
-<address>
-<strong>Harun Bozgül</strong><br>
-PureCore<br>
-Tübinger Str. 56<br>
-72762 Reutlingen<br>
-Deutschland<br>
-E-Mail:
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
-</address>
-
+<h2>16. Änderungen dieser Datenschutzerklärung</h2>
+<p>Diese Datenschutzerklärung kann aktualisiert werden, wenn sich Funktionen, Berechtigungen oder die Datenverarbeitung von Signal ändern. Die aktuelle Version wird auf dieser Seite veröffentlicht und innerhalb der Anwendung sowie im Google-Play-Eintrag verlinkt.</p>
 </section>
-
 
 <div class="divider"></div>
 
-
 <section id="legal-en" class="language" lang="en">
-
 <h2>Legal Notice</h2>
-
-<p>
-Provider information for Signal
-and this website.
-</p>
-
+<p>Provider information for Signal and this website.</p>
 <address>
 <strong>Harun Bozgül</strong><br>
 Operating under the developer name PureCore<br>
@@ -1228,50 +417,17 @@ Tübinger Str. 56<br>
 72762 Reutlingen<br>
 Germany
 </address>
-
 <h3>Contact</h3>
-
-<p>
-Email:
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
-</p>
-
-<h3>Responsible for Content</h3>
-
-<p>
-Harun Bozgül<br>
-Tübinger Str. 56<br>
-72762 Reutlingen<br>
-Germany
-</p>
-
+<p>Email: <a href="mailto:purecore.support@proton.me">purecore.support@proton.me</a></p>
 <h3>External Links</h3>
-
-<p>
-This website may contain links to
-external websites. The respective
-operators are responsible for
-their own content and
-data-processing practices.
-</p>
-
+<p>This website may contain links to external websites. The respective operators are responsible for their own content and data-processing practices.</p>
 </section>
-
 
 <div class="divider"></div>
 
-
 <section id="impressum" class="language" lang="de">
-
 <h2>Impressum</h2>
-
-<p>
-Anbieterkennzeichnung für Signal
-und diese Website.
-</p>
-
+<p>Anbieterkennzeichnung für Signal und diese Website gemäß § 5 DDG.</p>
 <address>
 <strong>Harun Bozgül</strong><br>
 Handelnd unter dem Entwicklernamen PureCore<br>
@@ -1279,43 +435,13 @@ Tübinger Str. 56<br>
 72762 Reutlingen<br>
 Deutschland
 </address>
-
 <h3>Kontakt</h3>
-
-<p>
-E-Mail:
-<a href="mailto:purecore.support@proton.me">
-purecore.support@proton.me
-</a>
-</p>
-
-<h3>Verantwortlich für den Inhalt</h3>
-
-<p>
-Harun Bozgül<br>
-Tübinger Str. 56<br>
-72762 Reutlingen<br>
-Deutschland
-</p>
-
+<p>E-Mail: <a href="mailto:purecore.support@proton.me">purecore.support@proton.me</a></p>
 <h3>Externe Links</h3>
-
-<p>
-Diese Website kann Verweise
-auf externe Internetseiten enthalten.
-Für deren Inhalte und
-Datenverarbeitung sind die
-jeweiligen Betreiber verantwortlich.
-</p>
-
+<p>Diese Website kann Verweise auf externe Internetseiten enthalten. Für deren Inhalte und Datenverarbeitung sind die jeweiligen Betreiber verantwortlich.</p>
 </section>
 
-
-<footer>
-    © 2026 PureCore · Signal
-</footer>
-
+<footer>© 2026 PureCore · Signal</footer>
 </div>
-
 </body>
 </html>
